@@ -35,6 +35,7 @@ export default function ProductPage() {
                 </div>
                 <p className={styles.description}>{data.description}</p>
                 <p className={styles.price}>€{data.price}</p>
+                <button>Add to Cart</button>
             </div>
         </div>
     )

@@ -1,18 +1,52 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  
-  color: rgba(0, 0, 0, 0.8);
+
+    color: rgba(0, 0, 0, 0.7);
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+    --primary-color: #95fcbc;
+}
+
+button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-width: 0;
+    border-style: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: inherit;
+    font-size: 1rem;
+    font-weight: bolder;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+button:before {
+    content: '\A';
+    position: absolute;
+    width: 100%; 
+    height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.1);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+button:hover:before {
+    opacity: 1;
 }

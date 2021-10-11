@@ -1,14 +1,15 @@
 ﻿import styles from "./navbar.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 
 export default function NavBar() {
     return (
         <nav className={styles.navbar}>
-            <a href={""}>
+            <Link href="/"><a href={""}>
                 <span className={styles.navbar__title}>Count</span><span
                 className={styles.navbar__title + ' ' + styles.sheep}>Sheep</span>
-            </a>
+            </a></Link>
             <div className={styles.navbar__menuContainer}>
                 <a href="" className={styles.navbar__menuItem}><Image src="/shopping-bag.svg"
                                                                       alt="shopping cart" width={24}

@@ -15,7 +15,7 @@
 }
 
 .navbar__title.sheep {
-    color: #95fcbc;
+    color: var(--primary-color);
 }
 
 .navbar__menuContainer {
@@ -29,4 +29,9 @@
     flex-direction: column;
     justify-content: center;
     margin-left: 1rem;
+    transition: transform 0.5s;
+}
+
+.navbar__menuItem:hover {
+    transform: rotate(30deg);
 }
