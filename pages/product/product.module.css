@@ -1,0 +1,57 @@
+﻿.container {
+    display: flex;
+    width: 1200px;
+    max-width: 1200px;
+    padding: 1rem;
+}
+
+.imageContainer {
+    position: relative;
+    width: 50%;
+}
+
+.infoContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    -webkit-user-drag: none;
+    object-fit: contain;
+}
+
+.title {
+    
+}
+
+.description {
+    
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    background-image: url('/star.svg');
+    width: 24px;
+    height: 24px;
+}
+
+.starFilled {
+    background-image: url('/star-fill.svg');
+    width: 24px;
+    height: 24px;
+}
+
+.reviews {
+    margin-left: 1rem;
+    font-weight: lighter;
+}

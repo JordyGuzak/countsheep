@@ -1,0 +1,24 @@
+﻿.productCard {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.productCard__image {
+    -webkit-user-drag: none;
+}
+
+.productCard__title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.productCard__description {
+    font-weight: lighter;
+}
+
+.productCard__price {
+    font-weight: bold;
+}
