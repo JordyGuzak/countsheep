@@ -1,7 +1,6 @@
 ﻿import styles from "./layout.module.css";
 import Head from "next/head";
 import NavBar from "../navbar/navbar";
-import ProductCard from "../product-card/product-card";
 import Footer from "../footer/footer";
 
 export default function Layout({ children }) {
