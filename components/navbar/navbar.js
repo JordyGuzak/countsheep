@@ -10,7 +10,8 @@ const Nav = styled.nav`
     display: flex;
     width: 100%;
     background-color: white;
-    z-index: 999;
+    z-index:     999;
+    position: fixed;
 `
 
 const Title = styled.span`
@@ -19,7 +20,7 @@ const Title = styled.span`
 `
 
 const Sheep = styled.span`
-    color: blue;
+    color: var(--primary-color);
 `
 
 export default function NavBar() {
@@ -27,8 +28,7 @@ export default function NavBar() {
         <Nav>
             <Link href="/">
                 <a href={""}>
-                    <Title>Count</Title>
-                    <Sheep>Sheep</Sheep>
+                    <Title>Count<Sheep>Sheep</Sheep></Title>
                 </a>
             </Link>
             <div className={styles.navbar__menuContainer}>
