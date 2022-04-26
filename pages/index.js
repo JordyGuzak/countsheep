@@ -17,9 +17,10 @@ export default function Home() {
     return (
             <div className={styles.grid}>
                 {data.map(product => (
-                    <Link key={product.id} href={`/product/${product.id}`}>
+                    <Link href={`/product/${product.id}`}>
                         <a>
-                            <ProductCard title={product.name}
+                            <ProductCard key={product.id}
+                                         title={product.name}
                                          description={product.description}
                                          price={`€${product.price}`}
                                          image={product.imageUrl}/>

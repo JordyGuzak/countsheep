@@ -13,10 +13,14 @@ export default function ProductPage() {
     const {productId} = router.query;
     const LoadingLayout = () => <div>Loading...</div>;
     const ErrorLayout = () => <div>Failed to load product.</div>;
+
+    if (!productId)
+        return LoadingLayout();
+
     const {data, error} = useSWR(`/api/products/${productId}`, fetcher);
 
-    if (!data) return LoadingLayout();
     if (error) return ErrorLayout();
+    if (!data) return LoadingLayout();
 
     return (
         <div className={styles.container}>
@@ -26,7 +30,7 @@ export default function ProductPage() {
             <div className={styles.infoContainer}>
                 <h1 className={styles.title}>{data.name}</h1>
                 <div className={styles.rating}>
-                    {[0, 1, 2, 3, 4].map(i => <div key={i} className={i < data.rating ? styles.starFilled : styles.star}/>)}
+                    {[0, 1, 2, 3, 4].map(i => <div className={i < data.rating ? styles.starFilled : styles.star}/>)}
                     <span className={styles.reviews}>{data.reviews} reviews</span>
                 </div>
                 <p className={styles.description}>{data.description}</p>
